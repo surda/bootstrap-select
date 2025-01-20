@@ -1,7 +1,7 @@
 /*!
- * Bootstrap-select v1.13.18 (https://developer.snapappointments.com/bootstrap-select)
+ * Bootstrap-select v1.14.0-beta3 (https://developer.snapappointments.com/bootstrap-select)
  *
- * Copyright 2012-2020 SnapAppointments, LLC
+ * Copyright 2012-2022 SnapAppointments, LLC
  * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
  */
 
@@ -35,8 +35,7 @@ select.selectpicker {
   display: none !important;
 }
 .bootstrap-select {
-  width: 220px \0;
-  /*IE9 and below*/
+  width: 220px;
   vertical-align: middle;
 }
 .bootstrap-select > .dropdown-toggle {
@@ -50,12 +49,12 @@ select.selectpicker {
   display: inline-flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .bootstrap-select > .dropdown-toggle:after {
   margin-top: -1px;
@@ -221,8 +220,8 @@ select.selectpicker {
   overflow: hidden;
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 auto;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
 }
 .bs3.bootstrap-select .dropdown-toggle .filter-option {
   padding-right: inherit;
@@ -253,6 +252,27 @@ select.selectpicker {
   margin-top: -2px;
   vertical-align: middle;
 }
+.bootstrap-select .dropdown-toggle .bs-select-clear-selected {
+  position: relative;
+  display: block;
+  margin-right: 5px;
+  text-align: center;
+}
+.bs3.bootstrap-select .dropdown-toggle .bs-select-clear-selected {
+  padding-right: inherit;
+}
+.bootstrap-select .dropdown-toggle .bs-select-clear-selected span {
+  position: relative;
+  top: -webkit-calc(((-1em / 1.5) + 1ex) / 2);
+  top: calc(((-1em / 1.5) + 1ex) / 2);
+  pointer-events: none;
+}
+.bs3.bootstrap-select .dropdown-toggle .bs-select-clear-selected span {
+  top: auto;
+}
+.bootstrap-select .dropdown-toggle.bs-placeholder .bs-select-clear-selected {
+  display: none;
+}
 .input-group .bootstrap-select.form-control .dropdown-toggle {
   border-radius: inherit;
 }
@@ -262,8 +282,8 @@ select.selectpicker {
 .bootstrap-select .dropdown-menu {
   min-width: 100%;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .bootstrap-select .dropdown-menu > .inner:focus {
   outline: none !important;
@@ -276,7 +296,7 @@ select.selectpicker {
   margin: 0;
   border-radius: 0;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .bootstrap-select .dropdown-menu li {
   position: relative;
@@ -290,9 +310,9 @@ select.selectpicker {
 .bootstrap-select .dropdown-menu li a {
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .bootstrap-select .dropdown-menu li a.opt {
   position: relative;
@@ -317,17 +337,17 @@ select.selectpicker {
   background: #f5f5f5;
   border: 1px solid #e3e3e3;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   pointer-events: none;
   opacity: 0.9;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .bootstrap-select .dropdown-menu .notify.fadeOut {
   -webkit-animation: 300ms linear 750ms forwards bs-notify-fadeOut;
-       -o-animation: 300ms linear 750ms forwards bs-notify-fadeOut;
-          animation: 300ms linear 750ms forwards bs-notify-fadeOut;
+  -o-animation: 300ms linear 750ms forwards bs-notify-fadeOut;
+  animation: 300ms linear 750ms forwards bs-notify-fadeOut;
 }
 .bootstrap-select .no-results {
   padding: 3px;
@@ -369,11 +389,11 @@ select.selectpicker {
   border-style: solid;
   border-width: 0 0.26em 0.26em 0;
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-       -o-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .bootstrap-select.show-menu-arrow.open > .dropdown-toggle,
 .bootstrap-select.show-menu-arrow.show > .dropdown-toggle {
@@ -433,8 +453,11 @@ select.selectpicker {
 .bs-actionsbox {
   width: 100%;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.bs-actionsbox .btn-group {
+  display: block;
 }
 .bs-actionsbox .btn-group button {
   width: 50%;
@@ -443,8 +466,11 @@ select.selectpicker {
   float: left;
   width: 100%;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.bs-donebutton .btn-group {
+  display: block;
 }
 .bs-donebutton .btn-group button {
   width: 100%;
